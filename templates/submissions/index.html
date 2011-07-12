@@ -1,0 +1,9 @@
+{% if list %}
+	<ul>
+	{% for l in list %}
+		<li><a href=''>{{l.title}}</a></li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p> Death</p>
+{% endif %}

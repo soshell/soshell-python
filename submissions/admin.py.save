@@ -1,0 +1,8 @@
+from submissions.models import Submission
+from django.contrib import admin
+
+class SubmissionAdmin(admin.ModelAdmin):
+	fields = ['title','cache_views','submit_date']
+
+
+admin.site.register(Submission, SubmissionAdmin)
