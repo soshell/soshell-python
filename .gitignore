@@ -1,4 +1,4 @@
-settings.py
+local_settings.py
 *.pyc
 runserver.sh
 /static
