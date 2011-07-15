@@ -1,6 +1,11 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
+class UserProfile(models.Model):
+    user = models.OneToOneField(User)
+    bio = models.TextField()
+
 class Tag(models.Model):
 	name = models.CharField(max_length=200)
 	create_date = models.DateTimeField('date created')
