@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<title>Website Title | {% block pagetitle %}{% endblock %}</title>
+		<script src="https://www.google.com/jsapi?key=ABQIAAAAvQQmUH3Ff2x8mUCPcFUu8RQbqwcvo6K3p5mjESH3p_3Lz8o-chTGtlqZ8B-YGYvmoRmYUCCxHeMzvg" type="text/javascript"></script>
+	</head>
+	<body>
+		<div id='container'>
+			<div id='header'>
+				<div id='header-area'>
+					<h1 class='logo'>
+						<a href=''>
+							<img src='images/logo.png' alt='' />
+						</a>
+					</h1>
+					<div id='header-right'>
+						<span>
+							Hey! <a href=''>Login</a> or <a href=''>Signup</a> right now
+						</span>
+						<form method='post' action='' id='search'>
+							<input type='text' name='search' class='text' value='search comics' /><input type='image' src='images/searchicon.png' class='img' alt='Go' />
+						</form>
+					</div>
+				</div>
+				<div id='header-nav'>
+					<ul>
+						<li><a href=''>Home</a></li>
+						<li><a href=''>Browse</a></li>
+						<li><a href=''>Featured</a></li>
+						<li><a href=''>Boards</a></li>
+						<li><a href=''>Submit New</a></li>
+						<li class='right'><a href=''>Top Tags</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id='page'>
+				<div id='content-left'>
+                    {% block content %}{% endblock %}
+				</div>
+				<div id='content-right'>
+                    {% block sidebar %}
+					<div style='width: 300px; height: 300px; background: black; margin: 10px 0;'></div>
+					<div class='sidebox rankbox'>
+						<h2>most active</h2>
+						<div class='rank-head'>
+							<div class='rank'>Rank</div>
+							<div class='rank-user'>Username</div>
+							<div class='rank-score'>Pts</div>
+						</div>
+						<div class='rank-list'>
+							<ul>
+								<li>
+									<div class='rank'>1</div>
+									<div class='rank-user'><a href=''>DaDominator</a></div>
+									<div class='rank-score'>40</div>
+								</li>
+								<li>
+									<div class='rank'>1</div>
+									<div class='rank-user'><a href=''>Jacques Johnson</a></div>
+									<div class='rank-score'>40</div>
+								</li>
+								<li>
+									<div class='rank'>1</div>
+									<div class='rank-user'><a href=''>Fred198</a></div>
+									<div class='rank-score'>11,234,049</div>
+								</li>
+								<li>
+									<div class='rank'>1</div>
+									<div class='rank-user'><a href=''>real_lies_399</a></div>
+									<div class='rank-score'>400,900</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+                    {% endblock %}
+				</div>
+			</div>
+			<div id='footer'>
+
+			</div>
+		</div>
+	</body>
+</html>
