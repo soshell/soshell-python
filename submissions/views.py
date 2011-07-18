@@ -15,3 +15,6 @@ def detail(request, sub_id):
 def post_comment(request):
 	pass
 
+def post_rating(request):
+	pass
+
