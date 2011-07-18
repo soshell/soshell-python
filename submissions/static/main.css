@@ -28,5 +28,12 @@
 		font-size: 14px;
 		font-weight: bold;
 		text-shadow: 1px 1px 1px #333;
-		padding: 8px 15px;
+		padding: 8px 10px;
+		border-radius: 5px;
+	}
+	#nav ul li a:hover{
+		background: #668;
+	}
+	#nav ul li a.current{
+		background: #334;
 	}
