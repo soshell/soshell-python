@@ -10,22 +10,23 @@
 
 .logo{
 	margin-top: 16px;
+	float: left;
 }
 
 #nav{
 	background: url('images/navbg.png') repeat-x;
-	height: 58px;
-	padding-top: 8px;
+	height: 40px;
+	padding-top: 18px;
 }
 	#nav ul li{
 		list-style-type: none;
 		float: left;
-		margin-right: 15px;
+		margin-right: 10px;
 	}
 	#nav ul li a{
 		color: white;
-		font-size: 13px;
+		font-size: 14px;
 		font-weight: bold;
 		text-shadow: 1px 1px 1px #bbb;
-		padding: 3px 5px;
+		padding: 8px 15px;
 	}
