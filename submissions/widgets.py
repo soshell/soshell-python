@@ -2,7 +2,7 @@ from django import forms
 from django.utils.encoding import smart_str
 from django.utils.safestring import mark_safe
 from django.forms.util import flatatt
-from submissions.models import Tag, Submission
+from submissions.models import Submission
 
 class CommaTags(forms.Widget):
     def render(self, name, value, attrs=None):
