@@ -25,5 +25,6 @@ urlpatterns += patterns('submissions.views',
     url(r'^submissions/$', 'index'),
     url(r'^$', 'index'),
     url(r'^submissions/(?P<sub_id>\d+)/$', 'detail'),
+    url(r'^submissions/create/$', 'create'),
     url(r'^submissions/post_comment/$', 'post_comment'),
 )

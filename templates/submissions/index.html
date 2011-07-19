@@ -7,10 +7,10 @@
 	{% for l in list %}
 	<div class='article'>
 		<div class='article-image'>
-			<a href='/submissions/view/{l.id}'><img src='{l.image}' /></a>
+			<a href='/submissions/view/{{l.id}}'><img src='{{l.image}}' /></a>
 		</div>
 		<div class='article-preview'>
-			<div class='article-title'><a href='/submissions/view/{l.id}'>{l.title}</a></div>
+			<div class='article-title'><a href='/submissions/{{l.id}}/'>{{l.title}}</a></div>
 		</div>
 	</div>
 	{% endfor %}

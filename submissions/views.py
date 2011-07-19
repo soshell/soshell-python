@@ -12,9 +12,11 @@ def detail(request, sub_id):
 		raise Http404
 	return render_to_response('submissions/details.html', {'submission': sub})
 
+def create(request):
+	return render_to_response('submissions/create.html')
+
 def post_comment(request):
 	pass
 
 def post_rating(request):
 	pass
-
