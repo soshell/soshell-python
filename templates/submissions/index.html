@@ -1,11 +1,21 @@
 {% extends 'base.html' %}
-{% block pagetitle %}Viewing submission{% endblock %}
+{% block pagetitle %}Frontpage{% endblock %}
 {% if list %}
-	<ul>
+<h2 class='bar'><span>Featured Articles</span></h2>
+<div class='submission-list'>
 	{% for l in list %}
-		<li><a href=''>{{l.title}}</a></li>
+	<div class='article'>
+		<div class='article-image'>
+			<a href='/submissions/view/{l.id}'><img src='{l.image}' /></a>
+		</div>
+		<div class='article-preview'>
+			<div class='article-title'><a href='/submissions/view/{l.id}'>{l.title}</a></div>
+		</div>
+	</div>
 	{% endfor %}
-	</ul>
+</div>
 {% else %}
-	<p> Death</p>
+<div class='submission-empty'>
+	No submissions available at this time.
+</div>
 {% endif %}

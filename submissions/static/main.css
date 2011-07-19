@@ -15,8 +15,8 @@
 
 #nav{
 	background: url('images/navbg.png') repeat-x;
-	height: 40px;
-	padding-top: 18px;
+	height: 38px;
+	padding-top: 20px;
 }
 	#nav ul li{
 		list-style-type: none;
@@ -32,8 +32,8 @@
 		border-radius: 5px;
 	}
 	#nav ul li a:hover{
-		background: #668;
+		background: #334;
 	}
 	#nav ul li a.current{
-		background: #334;
+		background: #223;
 	}
