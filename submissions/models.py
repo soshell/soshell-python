@@ -24,7 +24,7 @@ class Submission(models.Model):
 		return self.title
 
 class SubmissionForm(ModelForm):
-	tags = forms.ModelMultipleChoiceField(queryset=model.tag_set.all(), widget=CommaTags)
+	tags = forms.ModelMultipleChoiceField(queryset=Tag.objects.all(), widget=CommaTags)
 	class Meta:
 		model = Submission
 
