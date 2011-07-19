@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.forms import ModelForm
+from submissions.widgets import CommaTags
+from django import forms
 
 # Create your models here.
 class UserProfile(models.Model):
@@ -22,6 +24,7 @@ class Submission(models.Model):
 		return self.title
 
 class SubmissionForm(ModelForm):
-    class Meta:
-        model = Submission
+	tags = forms.ModelMultipleChoiceField(queryset=Tag.objects.all(), widget=CommaTags)
+	class Meta:
+		model = Submission
 
