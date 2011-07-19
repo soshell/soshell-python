@@ -18,6 +18,8 @@ class Submission(models.Model):
 	title = models.CharField(max_length=200)
 	submit_date = models.DateTimeField('date published')
 	cache_views = models.IntegerField(default=0)
+	text = models.TextFiled(blank=True)
+	image = models.ImageField(upload_to='images',blank=True)
 	tags = models.ManyToManyField(Tag, blank=True)
 	def __unicode__(self):
 		return self.title
