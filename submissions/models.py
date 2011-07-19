@@ -23,7 +23,7 @@ class Submission(models.Model):
 		return self.title
 
 class SubmissionForm(ModelForm):
-	tags = forms.CharField(widget=MultipleHiddenInput)
+	tags = forms.CharField(widget=forms.MultipleHiddenInput)
 	class Meta:
 		model = Submission
 
