@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block pagetitle %}Frontpage{% endblock %}
+{% block content %}
 {% if list %}
 <h2 class='bar'><span>Featured Articles</span></h2>
 <div class='submission-list'>
@@ -19,3 +20,4 @@
 	No submissions available at this time.
 </div>
 {% endif %}
+{% endblock %}
