@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.forms import ModelForm
 
 # Create your models here.
 class UserProfile(models.Model):
@@ -20,4 +21,7 @@ class Submission(models.Model):
 	def __unicode__(self):
 		return self.title
 
+class SubmissionForm(ModelForm):
+    class Meta:
+        model = Submission
 

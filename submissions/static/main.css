@@ -33,10 +33,16 @@
 	}
 	#nav ul li a:hover{
 		background: #334;
+		border-top: 1px solid #111;
+		border-bottom: 1px solid #88a;
+		border-left: 1px solid #88a;
+		border-right: 1px solid #111;
 	}
 	#nav ul li a.current{
 		background: #223;
 		border-top: 1px solid #000;
-		border-bottom: 1px solid #668;
+		border-bottom: 1px solid #779;
+		border-left: 1px solid #779;
+		border-right: 1px solid #000;
 		text-shadow: 1px 1px 1px #000;
 	}
