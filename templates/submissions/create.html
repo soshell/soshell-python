@@ -4,5 +4,16 @@
 <form method='post' action=''>
 	{% csrf_token %}
 	{{ form.non_field_errors }}
+	<div class="fieldWrapper">
+        {{ form.title.errors }}
+        <label for="id_subject">Submission Title:</label>
+        {{ form.title }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.tags.errors }}
+        <label for="id_message">Your message:</label>
+        {{ form.tags }}
+    </div>
+    <p><input type="submit" value="Send message" /></p>
 </form>
 {% endblock %}
