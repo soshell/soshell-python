@@ -19,7 +19,7 @@ class Submission(models.Model):
 	title = models.CharField(max_length=200)
 	submit_date = models.DateTimeField('date published')
 	cache_views = models.IntegerField()
-	tags = models.ManyToManyField(Tag)
+	tags = models.ManyToManyField(Tag, blank=True)
 	def __unicode__(self):
 		return self.title
 
