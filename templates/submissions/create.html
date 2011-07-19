@@ -9,6 +9,11 @@
         <label for="id_subject">Submission Title:</label>
         {{ form.title }}
     </div>
+	<div class="fieldWrapper">
+        {{ form.image.errors }}
+        <label for="id_subject">Image (optional)</label>
+        {{ form.image }}
+    </div>
     <div class="fieldWrapper">
         {{ form.tags.errors }}
         <label for="id_message">Your message:</label>
