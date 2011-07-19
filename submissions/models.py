@@ -18,13 +18,13 @@ class Tag(models.Model):
 class Submission(models.Model):
 	title = models.CharField(max_length=200)
 	submit_date = models.DateTimeField('date published')
-	cache_views = models.IntegerField()
+	cache_views = models.IntegerField(default=0)
 	tags = models.ManyToManyField(Tag, blank=True)
 	def __unicode__(self):
 		return self.title
 
 class SubmissionForm(ModelForm):
-	tags = forms.ModelMultipleChoiceField(queryset=Tag.objects.all(), widget=CommaTags)
+	tags = forms.ModelMultipleChoiceField()
 	class Meta:
 		model = Submission
 
