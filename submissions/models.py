@@ -28,4 +28,5 @@ class SubmissionForm(ModelForm):
 	tags = forms.CharField(widget=forms.MultipleHiddenInput,required=False)
 	class Meta:
 		model = Submission
+		exclude = ('submit_date','cache_views',)
 
