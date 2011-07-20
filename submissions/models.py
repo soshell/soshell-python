@@ -16,8 +16,8 @@ class Tag(models.Model):
 
 class Submission(models.Model):
 	title = models.CharField(max_length=200)
-	submit_date = models.DateTimeField('date published')
-	cache_views = models.IntegerField(default=0)
+	submit_date = models.DateTimeField('date created',auto_now_add=True)
+	cache_views = models.IntegerField(default=0, blank=True)
 	text = models.TextField(blank=True)
 	image = models.ImageField(upload_to='images',blank=True)
 	tags = models.ManyToManyField(Tag, blank=True)
