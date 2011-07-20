@@ -18,7 +18,7 @@ def create(request):
 		form = SubmissionForm(request.POST) # A form bound to the POST data
 		if form.is_valid(): # All validation rules pass
 			submission = form.save()
-			subj = submission.subject
+			#subj = submission.subject
 			return HttpResponseRedirect('/thanks/') # Redirect after POST
 	else:
 		form = SubmissionForm() # An unbound form
