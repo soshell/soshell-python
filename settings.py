@@ -115,6 +115,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'submissions',
+    'registration',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
@@ -122,6 +123,9 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
+
+# Days until inactive accounts are removed
+ACCOUNT_ACTIVATION_DAYS = 14
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

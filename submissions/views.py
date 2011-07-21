@@ -1,6 +1,7 @@
 from django.shortcuts import render_to_response
 from submissions.models import Submission, SubmissionForm
 from django.template import RequestContext
+from django.contrib.auth.decorators import login_required
 
 def index(request):
 	subs = Submission.objects.all()
@@ -23,6 +24,10 @@ def create(request):
 	else:
 		form = SubmissionForm() # An unbound form
 	return render_to_response('submissions/create.html',{'form': form}, context_instance=RequestContext(request))
+
+@login_required
+def account(request):
+	pass
 
 def post_comment(request):
 	pass
