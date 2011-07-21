@@ -18,7 +18,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^submissions/$', 'submissions.views.index'),
     url(r'^submissions/(?P<sub_id>\d+)/$', 'submissions.views.detail'),
-    url(r'^account/', include('registration.backends.default.urls')),
+    url(r'^account/', include('registration.urls')),
 )
 
 urlpatterns += patterns('submissions.views',
