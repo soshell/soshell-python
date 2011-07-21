@@ -8,6 +8,15 @@
 	height: 100px;
 }
 
+#header-right{
+	float: right;
+	margin-top: 20px;
+}
+
+.grey{
+	color:#b4b4b4;
+}
+
 .logo{
 	margin-top: 16px;
 	float: left;
