@@ -29,6 +29,9 @@ def create(request):
 def account(request):
 	pass
 
+def profile(request)
+	pass
+
 def post_comment(request):
 	pass
 
