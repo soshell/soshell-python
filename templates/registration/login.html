@@ -2,18 +2,15 @@
 {% block pagetitle %}Viewing Submission{% endblock %}
 
 {% block content %}
-<div class='submission-top'>
-    <div class='submission-tag'>
-        <img src='categoryicon' />
-        <a href=''>Main Category</a>
-    </div>
-    <div class='submission-nav'>
-        <a href='' class='submission-newer button'>Newer</a>
-        <a href='' class='submission-older button'>Older</a>
-    </div>
-    <div class='submission-title'>
-        <h2>Submission Name</h2>
-    </div>
-
-</div>
+{% if user.is_authenticated %}
+    <!-- Authenticated menu -->
+{% else %}
+    <h3>Login</h3>
+    <form action="/login/" method="post" accept-charset="utf-8">
+        <label for="username">Username</label><input type="text" name="username" value="" id="username" />
+        <label for="password">Password</label><input type="password" name="password" value="" id="password" />
+        <input type="hidden" name="next" value="{{ NEXT }}" />
+        <p><input type="submit" value="Login"></p>
+    </form>
+{% endif %}}
 {% endblock %}
